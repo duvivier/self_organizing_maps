@@ -13,5 +13,7 @@ The results of this command are in the file called "conda_list.txt" in this dire
 3. Then you can export the environment as a yml file:
 > conda env export --from-history > environment.yml
 
+4. To recreate the python environment, do the following:
+> conda env create -f environment.yml -n new_env_name
 
 
