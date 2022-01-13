@@ -1,0 +1,27 @@
+name: antarctica_som_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7.9
+  - ipykernel
+  - numpy
+  - cftime
+  - matplotlib
+  - pandas
+  - xarray
+  - netcdf4
+  - scipy
+  - cartopy
+  - dask
+  - ncar-jobqueue
+  - pop-tools
+  - intake
+  - intake-esm
+  - seaborn
+  - geocat-comp
+  - geocat-datafiles
+  - geocat-viz
+  - distributed
+  - nc-time-axis
+prefix: /glade/work/duvivier/miniconda3/envs/antarctica_som_env

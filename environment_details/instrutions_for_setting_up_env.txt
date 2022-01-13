@@ -1,0 +1,17 @@
+Before starting, make sure you went to https://github.com/NCAR/ncar-python-tutorial#step-2-install-miniconda-and-create-environments and completed steps 1 through 3.
+
+Also, make sure you activate your conda environment containing the packages needed for this work antarctica_som_env within the drop down menu located in the top right of this notebook.
+
+After environment was set up, from Cheyenne command line you can see what it takes to recreate environment by doing the following:
+1. From cheyenne command line, activate environment:
+> conda activate antarctica_som_env
+
+2. To get a list of human readable packages, once you have the environment activated do the following:
+> conda list >> conda_list.txt
+The results of this command are in the file called "conda_list.txt" in this directory. But the normal output is just at the command line if you don't specify the text file to write to. 
+
+3. Then you can export the environment as a yml file:
+> conda env export --from-history > environment.yml
+
+
+
