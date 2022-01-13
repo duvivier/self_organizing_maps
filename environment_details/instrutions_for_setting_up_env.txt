@@ -17,3 +17,53 @@ The results of this command are in the file called "conda_list.txt" in this dire
 > conda env create -f environment.yml -n new_env_name
 
 
+---------------------------------
+What I did for initial set up with guidance from Maria Molina:
+
+
+Do the following steps: 
+1) Install miniconda3. Go to https://github.com/NCAR/ncar-python-tutorial#step-2-install-miniconda-and-create-environments
+and complete steps 1 through 3. **You only do this once.**
+2) Create a python environment named ``som_env``. 
+
+    Log into cheyenne and create your som environment. **You only do this once.**
+    > conda create --name som_env python=3.7.9
+    
+    The environment will be located here: /glade/work/$USER/miniconda3/envs/som_env
+    
+    Now, if you have to install packages you do the following from the cheyenne command line:
+    > conda activate antarctica_som_env 
+
+    Then install packages and defined versions from the command line.
+    > conda install ipykernel
+    
+    > conda install numpy=1.17.2
+    
+    > conda install cftime=1.0.3.4
+
+    > conda install matplotlib=3.1.1
+
+    > conda install pandas=0.25.1
+
+    > conda install xarray=0.16.1
+
+    > conda install netCDF4=1.5.1.2
+
+    > conda install scipy=1.3.1
+
+    Install MiniSom. Clone the git repository at your desired location on glade. We suggest your work or home directory. Where it is located won’t matter for running your notebook since we will be installing it within the python environment.
+
+    > git clone https://github.com/JustGlowing/minisom.git
+
+    Then run the following command from within the minisom directory. There should be a setup.py file.
+
+    > python setup.py install
+
+    Now that you are done installing packages to you python environment named ``som_env``, you can deactivate it from the command line.
+
+    > conda deactivate
+
+    That’s it for installing! Hopefully this all worked okay.
+
+3) Make sure that when you open your notebook you activate your conda environment containing the packages needed for this work ``som_env`` within the drop down menu located in the top right of this notebook.
+
